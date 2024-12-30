@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Outfit, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.fade-in-effect {
+  animation: fade-in-effect 1s ease-in-out;
+}
+
+@keyframes fade-In {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-In-Scale {
+  0% {
+    transform: Scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: Scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes transformX {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+
+  22%,
+  24% {
+    transform: translateX(20px);
+  }
+
+  32%,
+  34% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(500px);
+    display: none;
+  }
+}
+
+@keyframes fade-in-effect {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

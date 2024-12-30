@@ -1,0 +1,113 @@
+.load-animation-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(245, 96, 42);
+}
+
+.website_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.website_title>svg {
+    background-color: transparent;
+}
+
+.website_title>img {
+    width: 200px;
+    animation: transformX 4.3s ease-in-out;
+    margin-left: 20px;
+    margin-bottom: 35px;
+}
+
+.website_title>svg>path {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 0.1;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: text-Effect 4.3s ease-in-out;
+}
+
+@keyframes text-Effect {
+    0% {
+        stroke-dashoffset: 50;
+    }
+
+    95% {
+        fill: #fff;
+    }
+
+    100% {
+        stroke-dasharray: 50;
+        stroke-dashoffset: 0;
+    }
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.loading-bar-background {
+    --height: 30px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px;
+    width: 200px;
+    height: var(--height);
+    background-color: #212121;
+    box-shadow: #0c0c0c -2px 2px 4px 0px inset;
+    border-radius: calc(var(--height) / 2);
+}
+
+.loading-bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    --height: 20px;
+    width: 0%;
+    height: var(--height);
+    overflow: hidden;
+    background: rgb(222, 74, 15);
+    background: linear-gradient(0deg,
+            rgba(222, 74, 15, 1) 0%,
+            rgba(249, 199, 79, 1) 100%);
+    border-radius: calc(var(--height) / 2);
+    animation: loading 5s ease-out infinite;
+}
+
+.white-bars-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.white-bar {
+    background: rgb(255, 255, 255);
+    width: 10px;
+    height: 45px;
+    opacity: 0.5;
+    rotate: 35deg;
+}
+
+@keyframes loading {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}

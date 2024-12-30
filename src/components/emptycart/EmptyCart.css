@@ -1,0 +1,22 @@
+.emptycart {
+    width: 100%;
+    text-align: center;
+    height: 60vh;
+}
+
+.emp-cart-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    margin-top: 50px;
+}
+
+.emp-cart-img img {
+    width: 425px;
+}
+
+.emptycart h2 {
+    font-size: 40px;
+    color: tomato;
+}
